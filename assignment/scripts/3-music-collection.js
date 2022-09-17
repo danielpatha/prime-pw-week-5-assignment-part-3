@@ -17,6 +17,15 @@ addToCollection('The Man on the Moon: End of Day', 'Kid Cudi', '2009');
 addToCollection('Funhouse Mirror', 'Marlon Craft', '2019');
 console.log(collection);
 
+function showCollection(newCollection){   
+    console.log(newCollection.length);
+for (let i = 0; i < newCollection.length; i++){
+
+console.log(newCollection[i].title ,'by', newCollection[i].artist, ', published in',newCollection[i].yearPublished); 
+}
+}
+showCollection(collection);
+
 
 
 
