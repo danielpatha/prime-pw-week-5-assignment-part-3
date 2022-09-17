@@ -3,9 +3,9 @@ console.log('***** Music Collection *****')
 let collection = [];
 
 function addToCollection(title, artist, yearPublished){
-let albumInfo = {title: title, artist: artist, yearPublished: yearPublished }
-collection.push(albumInfo);
-return albumInfo;
+    let albumInfo = {title: title, artist: artist, yearPublished: yearPublished}
+        collection.push(albumInfo);
+        return albumInfo;
 }
 
 
@@ -19,13 +19,24 @@ console.log(collection);
 
 function showCollection(newCollection){   
     console.log(newCollection.length);
-for (let i = 0; i < newCollection.length; i++){
-
-console.log(newCollection[i].title ,'by', newCollection[i].artist, ', published in',newCollection[i].yearPublished); 
-}
+    for (let i = 0; i < newCollection.length; i++){
+        console.log(newCollection[i].title ,'by', newCollection[i].artist, ', published in',newCollection[i].yearPublished); 
+    }
 }
 showCollection(collection);
 
+function findByArtist(artist, array) {
+    artistResults = [];
+    for(let i = 0; i < array.length; i++){
+         if(artist === array[i].artist){ 
+        artistResults.push(array[i]);
+       }
+    }
+    return artistResults;
+}
+        
+//findByArtist('Nipsey Hussle',collection);
 
+console.log('testing findByArtist', findByArtist('Marlon Craft', collection));
 
 
